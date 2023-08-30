@@ -1,6 +1,6 @@
 fx_version 'cerulean'
 games { 'gta5' }
-author 'draobrehtom'
+author 'luman'
 
 this_is_a_map 'yes'
 
