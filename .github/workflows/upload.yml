@@ -3,7 +3,8 @@ name: Upload to CFX Portal
 on:
   push:
     branches: [main]
-  jobs:
+
+jobs:
     upload:
       runs-on: ubuntu-latest
       steps:
