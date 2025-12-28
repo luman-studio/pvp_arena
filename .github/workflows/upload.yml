@@ -16,6 +16,6 @@ jobs:
             cookie: ${{ secrets.FORUM_COOKIE }}
             escrowed: |
               asset_name: 'pvp_arena-master'
-              escrow_ignore: ['init.lua', 'shared/config.lua', 'shared/utils.lua']
+              escrow_ignore: ['config.lua', 'shared/*.lua', 'server/framework.lua', 'client/framework.lua']
             openSource: |
               asset_name: 'pvp_arena-master-source'
