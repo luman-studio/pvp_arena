@@ -1,0 +1,18 @@
+name: Upload to CFX Portal
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Upload to CFX Portal
+        uses: draobrehtom/cfx-portal-upload@main
+        with:
+          cookie: ${{ secrets.FORUM_COOKIE }}
+          assetName: 'pvp_arena-master'
