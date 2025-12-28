@@ -3,7 +3,7 @@
 PvP arena for FiveM.
 
 ## Showcase
-https://streamable.com/linhi8
+[https://streamable.com/linhi8](https://www.youtube.com/watch?v=lpN7gu3zXHg)
 
 ## Screenshots
 
