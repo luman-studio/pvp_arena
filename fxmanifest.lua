@@ -1,10 +1,10 @@
 fx_version 'cerulean'
 game 'gta5'
 
-name 'My Resource'
+name 'PvP arena for FiveM'
 author 'Luman Studio'
 version '1.0.0'
-description 'PvP arena for FiveM'
+description 'Made by https://lumanstudio.com'
 
 
 files {
