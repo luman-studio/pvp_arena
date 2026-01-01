@@ -5,16 +5,23 @@ on:
     branches: [master, main]
 
 jobs:
-    upload:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v4
-        
-        - name: Upload to CFX Portal
-          uses: luman-studio/cfx-portal-upload@main
-          with:
-            cookie: ${{ secrets.FORUM_COOKIE }}
-            escrowed: |
-              asset_name: 'pvp_arena-master'
-            openSource: |
-              asset_name: 'pvp_arena-master-source'
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload and Deploy LumanStudioPVPMAP
+        uses: luman-studio/cfx-portal-upload@main
+        with:
+          cookie: ${{ secrets.FORUM_COOKIE }}
+          escrowed: |
+            asset_name: 'pvp_arena-master'
+          openSource: |
+            asset_name: 'pvp_arena-master-source'
+          # Deploy
+          deploy: true
+          ssh_host: ${{ secrets.SERVER_HOST }}
+          ssh_user: ${{ secrets.SERVER_USER }}
+          ssh_key: ${{ secrets.SSH_KEY }}
+          deploy_path: '~/server-data/resources/[tebex]'
+          discord_webhook: ${{ secrets.DISCORD_WEBHOOK }}
